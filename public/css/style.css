@@ -5,6 +5,7 @@
     --secondary-clr: #00C6B1; 
 
     --background-clr: #FFF7D6;
+    --text-clr: #fff;
 }
 
 *,
@@ -53,4 +54,65 @@ button {
 
 .flex {
     display: flex;
+    gap: 2em;
+}
+
+.main {
+    padding: 4em;
+    background-color: var(--primary-clr);
+    color: var(--text-clr);
+    text-align: center;
+}
+
+.main__heading {
+    padding-bottom: 1em;
+}
+
+.main__link {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 1em .75em;
+    background-color: var(--secondary-clr);
+    border-radius: 10em;
+    color: var(--text-clr);
+    border-style: none;
+}
+
+.input-field {
+    position: relative;
+}
+
+.form__input {
+    padding: 1rem;
+    margin-bottom: 2em;
+    border: 2px solid var(--background-clr);
+    background: none;
+    color: var(--text-clr);
+    outline: none;
+    border-radius: 10em;
+}
+
+.form__input:focus,
+.form__input:hover {
+    border-color: var(--secondary-clr);
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    background-color: var(--primary-clr);
+}
+
+.form__label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--text-clr);
+    cursor: text;
+    transition: top 200ms ease-in,
+        left 200ms ease-in,
+        font-size 200ms ease-in;
 }
