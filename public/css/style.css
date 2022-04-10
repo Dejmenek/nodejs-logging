@@ -78,6 +78,7 @@ button {
     border-radius: 10em;
     color: var(--text-clr);
     border-style: none;
+    cursor: pointer;
 }
 
 .input-field {
