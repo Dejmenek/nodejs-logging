@@ -16,10 +16,10 @@ const connection = mysql.createConnection({
 
 connection.connect((error) => {
     if(error) {
-        console.log("Nie mozna polaczyc sie do bazy");
+        console.log("Nie można połączyć się z bazą danych");
         return;
     } else {
-        console.log("Polaczono sie z baza danych");
+        console.log("Polączono się z bazą danych");
     }
 });
 
@@ -59,7 +59,7 @@ app.post('/login', (req,res) => {
             
         })
     } else {
-        res.send('Wprowadz nazwe użytkownika i hasło');
+        res.send('Wprowadź nazwę użytkownika i hasło');
         res.end();
     }
 })
@@ -76,7 +76,7 @@ app.post('/register', (req,res) => {
             res.redirect('/login');
         });
     } else {
-        res.send('Wprowadz wszystkie dane');
+        res.send('Wprowadź wszystkie dane');
     }
 })
 
