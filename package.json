@@ -1,7 +1,6 @@
 {
   "name": "logging",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -12,7 +11,17 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.2",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.3",
     "mysql": "^2.18.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dejmenek/nodejs-logging.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dejmenek/nodejs-logging/issues"
+  },
+  "homepage": "https://github.com/Dejmenek/nodejs-logging#readme",
+  "description": ""
 }
