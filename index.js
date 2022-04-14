@@ -17,7 +17,7 @@ const DB_DATABASE = process.env.DB_DATABASE
 const DB_PORT = process.env.DB_PORT
 const SESSION_SECRET = process.env.SESSION_SECRET
 
-const port = process.env.PORT
+const PORT = process.env.PORT
 
 const connection = mysql.createConnection({
     host: DB_HOST,
@@ -57,7 +57,7 @@ app.get('/login', (req,res) => {
 })
 
 app.get('/dashboard', (req,res) => {
-    res.render('index.ejs', {msg});
+    res.render('index.ejs');
 });
 
 app.get('/register', (req,res) => {
@@ -72,7 +72,7 @@ app.post('/login', (req,res) => {
         if(error) throw error
 
         if(results.length > 0) {
-            res.redirect('/dashboard', {msg: `Witaj ${username}`});
+            res.redirect('/dashboard');
         } else {
             res.redirect('/login');
         }
@@ -90,4 +90,4 @@ app.post('/register', (req,res) => {
     });
 })
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
